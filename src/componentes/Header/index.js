@@ -1,20 +1,21 @@
-import React from "react";
-import {Link} from "react-router-dom";
-import "./estilo.css";
+import React from 'react';
+import senai from '../../img/senai.svg'
+import './header.css';
 
 function Header(){
     return(
         <header>
-            <div>
-                <p>Projeto Criação de API</p>
+            <div className='titulo'>
+                <p> PROJETO CRIAÇÃO DE API </p>
+            </div>
+
+            <div className='espacoLogo'>
+                <img src= { senai } alt='senai logo'/>
+            </div>  
                 
-           </div>
-            <div>
-           <Link className="topo" to="/">
-            <img src="" alt="logoSenai"/>    
-            </Link>
-           </div>
+            <div className='linha'> </div>
         </header>
-    )
-};
+    );
+}
+
 export default Header;
