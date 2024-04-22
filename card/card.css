@@ -1,0 +1,100 @@
+.container{
+    text-align: center;
+}
+.container h1{
+    color: red;
+    margin-left: 45px;
+}
+.adicionar{
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: red;
+    border: solid red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 150px;
+    margin-right: -250px;
+    font-weight: 500;
+}
+.sessao{
+    background-color: white;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.lista{
+    
+    line-height: 90px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.lista li{
+    background-color: rgb(255, 255, 255);
+    width: 90vw;
+    margin-left: -40px;
+    border: solid red;
+    display: flex;
+    align-items: center;
+    
+}
+body{
+    overflow-x: hidden;
+}
+.lista li img{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    margin-left: 15px;
+    margin-top: -2px;
+
+}
+.nome{
+    font-size: 30px;
+    line-height: 45px;
+    margin-left: 40px;
+}
+.excluir{
+    display: flex;
+    margin-left: 40px;
+    background-color: red;
+    border: none;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.visu{
+    display: flex;
+    margin-left: 500px;
+    background-color: red;
+    border: none;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.sla{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.rodape{
+    width: 100vw;
+    height: 60px;
+
+}
