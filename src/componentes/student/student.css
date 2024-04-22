@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+}
+
+.student{
+    width: 979px;
+    height: 417px;
+    flex-shrink: 0;
+    border: 1px solid #E30613;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    padding-left: 80px;
+}
+
+
+
+.student_description p{
+    width: 448px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "Outfit", sans-serif; 
+}
+
+.student_description h1{
+    color:black;
+    font-family: "Outfit", sans-serif; 
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.student_description button{
+    background-color: red;
+    border: none;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.student_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.student_info img{
+    width: 225px;
+    height: 230px;
+    flex-shrink: 0;
+        
+}
+
+.student_info button{
+    background-color: red;
+    border: none;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    justify-content: center;
+    border-radius: 20px;
+    font-weight: 500;
+    width: 225px;
+    margin-top: 10px;
+    
+}
