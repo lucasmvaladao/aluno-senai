@@ -1,18 +1,13 @@
 import React from "react";
-import user from '../../img/user.png'
+import user from '../../img/senai.svg'
+import EstruturaPagina from "../../componentes/EstruturaPagina";
 import './card.css'
 
 function Card (){
     return(
+        <EstruturaPagina>
         <div className="container">
-            <div className="sla">
-            <h1>
-                ALUNOS SENAI-SP
-                <br/>
-                INFORMAÇÕES CADASTRADAS
-            </h1>
-            <button className="adicionar"> ADICIONAR  <strong> + </strong> </button>
-            </div>
+            
             <section className="sessao">
                 <ul className="lista">
                     <li>
@@ -53,8 +48,9 @@ function Card (){
                     
                 </ul>
             </section>
-            <div className="rodape"></div>
+           
         </div>
+        </EstruturaPagina>
     )
 }
 

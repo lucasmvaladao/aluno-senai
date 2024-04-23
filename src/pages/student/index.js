@@ -1,12 +1,8 @@
 import React from "react";
-import senai from "../../img/senai.svg";
-import header from "../header/index";
-import main from "../main/index";
-
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "./student.css";
 
-function Student() {
+function student() {
   return (
     <EstruturaPagina>
       <section classname="student">
@@ -30,4 +26,4 @@ function Student() {
   );
 }
 
-export default Student;
+export default student;

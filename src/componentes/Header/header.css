@@ -1,24 +1,37 @@
 .titulo{
     background-color: red;
     width: 100vw;
-    text-align: center;
-    margin-top: -16px;
-    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
 }
 .titulo p{
     color: white;
     font-weight: 700;
-    padding-top: 1.4px;
 }
 .espacoLogo img{
-    width: 390px;
-    height: 100px;
-    margin-top: 20px;
-    margin-left: 445px;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .linha{
     width: 100vw;
     height: 2px;
     background-color: red;
-    margin-top: 20px;
+}
+
+.sla{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+h1{
+    color: red;
+    margin-left: 45px;
 }
