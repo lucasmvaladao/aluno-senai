@@ -14,6 +14,16 @@ function Header(){
             </div>  
                 
             <div className='linha'> </div>
+
+            <div className="sla">
+                <h1>
+                    ALUNOS SENAI-SP
+                    <br/>
+                    INFORMAÇÕES CADASTRADAS
+                </h1>
+                <button className="adicionar"> ADICIONAR  <strong> + </strong> </button>
+            </div>
+            
         </header>
     );
 }

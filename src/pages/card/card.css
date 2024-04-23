@@ -1,10 +1,8 @@
 .container{
     text-align: center;
 }
-.container h1{
-    color: red;
-    margin-left: 45px;
-}
+
+
 .adicionar{
     border-radius: 20px;
     width: 150px;
@@ -62,7 +60,9 @@ body{
 .excluir{
     display: flex;
     margin-left: 40px;
+    margin-right: 40px;
     background-color: red;
+    padding: 10px;
     border: none;
     width: 150px;
     height: 30px;
@@ -76,6 +76,7 @@ body{
 .visu{
     display: flex;
     margin-left: 500px;
+    padding: 10px;
     background-color: red;
     border: none;
     width: 150px;
@@ -87,14 +88,5 @@ body{
     border-radius: 20px;
     font-weight: 500;
 }
-.sla{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
-.rodape{
-    width: 100vw;
-    height: 60px;
 
-}

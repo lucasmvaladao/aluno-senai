@@ -1,12 +1,10 @@
-import React from 'react';
+import Rotas from "./Rotas";
 import './App.css';
-import Header from './componentes/header';
-import Main from './componentes/main';
-function App() {
-  return (
-    <div className='app'>
-      <Header />
-      <Main />
+
+function App(){
+  return(
+    <div className="App">
+      <Rotas />
     </div>
   );
 }
