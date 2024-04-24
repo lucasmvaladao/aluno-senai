@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import senai from '../../img/senai.svg'
 import './header.css';
 
@@ -10,7 +11,7 @@ function Header(){
             </div>
 
             <div className='espacoLogo'>
-                <img src= { senai } alt='senai logo'/>
+                    <Link to='/'> <img src= { senai } alt='senai logo'/>  </Link>
             </div>  
                 
             <div className='linha'> </div>
@@ -21,7 +22,9 @@ function Header(){
                     <br/>
                     INFORMAÇÕES CADASTRADAS
                 </h1>
+                <Link>
                 <button className="adicionar"> ADICIONAR  <strong> + </strong> </button>
+                </Link>
             </div>
             
         </header>

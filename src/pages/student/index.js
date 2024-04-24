@@ -1,16 +1,19 @@
 import React from "react";
+import teste from '../../img/teste.jpg';
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "./student.css";
 
 function student() {
   return (
     <EstruturaPagina>
-      <section classname="student">
-        <div classname="student_info">
-          <img src="img/1671547718846.jpg" alt="aluno1"></img>
+      <section className="student">
+        <div className="student_info">
+          <div className="imagem">
+           <img src={ teste } alt="aluno1"></img>
+          </div>
           <button onclick="contatoAlunos()" href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/">CONTATO</button>
         </div>
-        <div classname="student_description">
+        <div className="student_description">
           <h1>Kamila Cavalcante</h1>
           <p>
             tem 26 anos e atualmente estudante de Desenvolvimento de Sistemas no
@@ -21,7 +24,11 @@ function student() {
           </p>
           <button onclick="editarAlunos()">EDITAR</button>
           </div>
+
+          
       </section>
+        <div className="footer"> </div>
+
     </EstruturaPagina>
   );
 }
