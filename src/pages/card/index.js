@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import api from "../../services/api"
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -8,7 +9,6 @@ import './card.css'
 
 
 function Card (){
-
 
     //declarar uma variavel de estado para a lista de filmes
     const [infos, setinfo] = useState([]);
@@ -22,6 +22,9 @@ function Card (){
 
         usarInfo();
     }, []);
+
+   
+
     return(
         <EstruturaPagina>
         <div className="container">
@@ -36,55 +39,13 @@ function Card (){
                         <img src={ inf.foto } alt="imagem aluno"/>
                         <h2 className="nome"> {inf.nome} </h2>
                         <Link to={`/contato/${inf._id}`} className="link"><button className="visu"> VISUALIZAR </button> </Link>
-                        <button className="excluir"> EXCLUIR </button>
+                        <button className="excluir" onClick={ () => Excluir(inf._id) }> EXCLUIR </button>
                         </li>
                         </article>
                     )
                 })}
                        
-                        
-
-
-                        
-
-                    <li>
-                        <img src={ user } alt="imagem aluno"/>
-                        <h2 className="nome"> ALUNO 02 </h2>
-
-
-                        <Link to='/contato' className="link">
-                        <button className="visu"> VISUALIZAR </button>
-                        </Link>
-
-
-                        <button className="excluir"> EXCLUIR </button>
-                    </li>
-
-                    <li>
-                        <img src={ user } alt="imagem aluno"/>
-                        <h2 className="nome"> ALUNO 03 </h2>
-
-
-                        <Link to='/contato' className="link">
-                        <button className="visu"> VISUALIZAR </button>
-                        </Link>
-
-
-                        <button className="excluir"> EXCLUIR </button>
-                    </li>
-
-                    <li>
-                        <img src={ user } alt="imagem aluno"/>
-                        <h2 className="nome"> ALUNO 04 </h2>
-
-
-                        <Link to='/contato' className="link">
-                        <button className="visu"> VISUALIZAR </button>
-                        </Link>
-
-
-                        <button className="excluir"> EXCLUIR </button>
-                    </li>
+                    
 
                     <li>
                         <img src={ user } alt="imagem aluno"/>
@@ -108,6 +69,11 @@ function Card (){
         </div>
          </EstruturaPagina>
     )
+
+    function Excluir(_id){
+        axios.delete(`https://api-fivedevs.onrender.com/${_id}`)
+        window.alert("ESSE ID FOI PRO VASCO")
+        }
 }
 
 export default Card;

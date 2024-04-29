@@ -22,7 +22,7 @@ function Header(){
                     <br/>
                     INFORMAÇÕES CADASTRADAS
                 </h1>
-                <Link>
+                <Link to={`/Edit`}>
                 <button className="adicionar"> ADICIONAR  <strong> + </strong> </button>
                 </Link>
             </div>
