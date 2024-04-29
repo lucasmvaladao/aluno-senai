@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import card  from '../pages/card';
 import student from '../pages/student';
+import Edit from "../pages/edit";
 
 
 function Rotas(){
@@ -11,6 +12,7 @@ function Rotas(){
             <Routes>
                 <Route exact path='/'        Component={card} />
                 <Route exact path='/contato/:_id' Component={ student } />
+                <Route exact path="/Edit"        Component={ Edit} />
             </Routes>    
         </BrowserRouter>
     );
