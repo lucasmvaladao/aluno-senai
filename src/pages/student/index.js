@@ -35,20 +35,23 @@ function Student() {
   
   return (
     <EstruturaPagina>
-      <section className="student">
-                        <article key={info._id}>
-                        <div className="student_info">
-                        <div className="imagem">
-                        <img src={ info.foto } alt="imagem aluno"/>
-                        </div>
-                        <button onclick="contatoAlunos()" href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/">CONTATO</button>
-                        </div>
-                        <div className="student_description">
-                        <h2 className="nome"> {info.nome} </h2>
-                        <p> {info.descricao}</p>
-                        <button onclick="editarAlunos()">EDITAR</button>
-                        </div>
-                        </article>
+      <section className="student_container">
+        <div className="student_all">
+          <article key={info._id}>
+            <div className="student_info">
+              <div className="imagem">
+                <img src={ info.foto } alt="imagem aluno"/>
+              </div>
+              <button onclick="contatoAlunos()" href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/">CONTATO</button>
+            </div>
+            
+            <div className="student_description">
+              <h1 className="nome"> {info.nome} </h1>
+              <p> {info.descricao}</p>
+              <button onclick="editarAlunos()">EDITAR</button>
+            </div> 
+          </article>
+        </div>
       </section>
         <div className="footer"> </div>
 
