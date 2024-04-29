@@ -10,7 +10,7 @@ function Rotas(){
         <BrowserRouter>
             <Routes>
                 <Route exact path='/'        Component={card} />
-                <Route exact path='/contato' Component={student} />
+                <Route exact path='/contato/:_id' Component={ student } />
             </Routes>    
         </BrowserRouter>
     );

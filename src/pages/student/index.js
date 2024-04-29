@@ -1,31 +1,54 @@
 import React from "react";
-import teste from '../../img/teste.jpg';
+import api from "../../services/api"
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "./student.css";
 
-function student() {
+function Student() {
+
+  const { _id }  = useParams();
+
+  const [info, setinfo] = useState([]);
+
+    //Antes da reinderização da página e executado o hook useEffect()
+    useEffect(() => {
+        async function usarInfo(){
+            const resposta = await api.get(`https://api-fivedevs.onrender.com/${_id}`);
+            setinfo(resposta.data);
+        };
+
+        usarInfo();
+    }, );
+
+
+      function salvarAluno(){
+      const minhaLista = localStorage.getItem('infos');
+      let Aluno = JSON.parse(minhaLista) || [];
+
+      
+      
+      Aluno.push(info);
+      localStorage.setItem('infos', JSON.stringify(Aluno));
+  };
+
+  
   return (
     <EstruturaPagina>
       <section className="student">
-        <div className="student_info">
-          <div className="imagem">
-           <img src={ teste } alt="aluno1"></img>
-          </div>
-          <button onclick="contatoAlunos()" href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/">CONTATO</button>
-        </div>
-        <div className="student_description">
-          <h1>Kamila Cavalcante</h1>
-          <p>
-            tem 26 anos e atualmente estudante de Desenvolvimento de Sistemas no
-            Senai Suiço Brasileira. Reside em São Paulo, na Zona Leste.
-            Contribuiu para o criação do projeto "Criando API", sob a função de
-            (função). Projeto ministrado pelo professor Átila durante as aulas
-            de PWFE - 2º Semestre / 2024.
-          </p>
-          <button onclick="editarAlunos()">EDITAR</button>
-          </div>
-
-          
+                        <article key={info._id}>
+                        <div className="student_info">
+                        <div className="imagem">
+                        <img src={ info.foto } alt="imagem aluno"/>
+                        </div>
+                        <button onclick="contatoAlunos()" href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/">CONTATO</button>
+                        </div>
+                        <div className="student_description">
+                        <h2 className="nome"> {info.nome} </h2>
+                        <p> {info.descricao}</p>
+                        <button onclick="editarAlunos()">EDITAR</button>
+                        </div>
+                        </article>
       </section>
         <div className="footer"> </div>
 
@@ -33,4 +56,4 @@ function student() {
   );
 }
 
-export default student;
+export default Student;
