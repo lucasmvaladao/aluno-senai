@@ -3,7 +3,6 @@ import axios from 'axios';
 import api from "../../services/api"
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import user from '../../img/senai.svg'
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import './card.css'
 
@@ -44,23 +43,6 @@ function Card (){
                         </article>
                     )
                 })}
-                       
-                    
-
-                    <li>
-                        <img src={ user } alt="imagem aluno"/>
-                        <h2 className="nome"> ALUNO 05 </h2>
-
-
-                        <Link to='/contato' className="link">
-                        <button className="visu"> VISUALIZAR </button>
-                        </Link>
-
-
-                        <button className="excluir"> EXCLUIR </button>
-                    </li>
-
-                    
                 </ul>
             </section>
 
