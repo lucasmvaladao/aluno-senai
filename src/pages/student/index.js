@@ -2,6 +2,7 @@ import React from "react";
 import api from "../../services/api"
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "./student.css";
 
@@ -22,7 +23,7 @@ function Student() {
     }, );
 
 
-      function salvarAluno(){
+    
       const minhaLista = localStorage.getItem('infos');
       let Aluno = JSON.parse(minhaLista) || [];
 
@@ -30,9 +31,7 @@ function Student() {
       
       Aluno.push(info);
       localStorage.setItem('infos', JSON.stringify(Aluno));
-  };
 
-  
   return (
     <EstruturaPagina>
       <section className="student">
@@ -41,12 +40,16 @@ function Student() {
                         <div className="imagem">
                         <img src={ info.foto } alt="imagem aluno"/>
                         </div>
-                        <button onclick="contatoAlunos()" href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/">CONTATO</button>
+                        <button >
+                          <a href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/" >CONTATO</a>
+                        </button>
                         </div>
                         <div className="student_description">
                         <h2 className="nome"> {info.nome} </h2>
                         <p> {info.descricao}</p>
-                        <button onclick="editarAlunos()">EDITAR</button>
+                        <Link to={`/put/${info._id}`} >
+                        <button >EDITAR</button>
+                        </Link>
                         </div>
                         </article>
       </section>
@@ -54,6 +57,9 @@ function Student() {
 
     </EstruturaPagina>
   );
-}
+
+  
+  }
+
 
 export default Student;

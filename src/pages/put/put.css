@@ -1,14 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
-a{
-    text-decoration: none;
-    color: white;
+*{
+    margin: 0;
+    padding: 0;
 }
+
 .student{
     width: 979px;
     height: 417px;
-    margin-left: 100px;
+    flex-shrink: 0;
     border: 1px solid #E30613;
     display: flex;
     align-items: center;
@@ -16,30 +16,33 @@ a{
     padding-left: 80px;
 }
 
+.student_description{
+    display: flex;
+    flex-direction: column;
 
-
-.student_description p{
-    width: 448px;
-    color: #000;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    font-family: "Outfit", sans-serif;
-    text-align: left; 
-    margin-bottom: 40px;
 }
 
-.student_description h1{
-    text-align: left;
-    color:black;
-    font-family: "Outfit", sans-serif; 
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 5px;
-    margin-left: 0px;
+.student_description #snome{
+    color: #000;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: rgb(217,217,217,0.25); 
+    border: none;  
+}
+
+.student_description #sdescricao{
+    color: #000;
+    border-radius: 5px;
+    border: none; 
+    width: 450px;
+    height: 120px;
+    background: rgb(217,217,217,0.25);  
+}
+
+#des{
+margin-top: 10px;
 }
 
 .student_description button{
@@ -54,21 +57,36 @@ a{
     justify-content: center;
     border-radius: 20px;
     font-weight: 500;
-    margin-top: -3px;
-    margin-left: -230px;
-    position: absolute;
+    margin-top: 55px;
+}
+
+::placeholder,label{
+    color: rgb(0,0,0,0.3);
+    font-size: 15px;
+    font-family: "Inter", sans-serif; 
 }
 
 .student_info{
     display: flex;
     flex-direction: column;
+ 
 }
 
 .student_info img{
     width: 225px;
     height: 230px;
     flex-shrink: 0;
-        
+}
+
+.student_info #simg{
+    color: #000;
+    font-size: 15px;
+    margin: 5px 10px;
+    padding: 90px 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    background: rgb(217,217,217,0.25); 
 }
 
 .student_info button{
@@ -84,17 +102,5 @@ a{
     border-radius: 20px;
     font-weight: 500;
     width: 225px;
-    margin-top: 20px;
-    
-}
-.imagem{
-    width: 225px;
-    height: 272px;
-    border: solid black;
-    margin-top: 56px;
-}
-
-.footer{
-    width: 100vw;
-    height: 70px;
+    margin-top: 10px;
 }
