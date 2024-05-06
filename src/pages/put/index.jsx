@@ -1,7 +1,6 @@
 import React from "react";
-// import axios from 'axios';
-import api from "../../services/api"
-import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "./put.css"
@@ -10,60 +9,76 @@ import "./put.css"
 
   const { _id }  = useParams();
 
-  const [infor, setinfo] = useState([]);
+  const informacoes = JSON.parse(localStorage.getItem('aluno1')) || [];
 
-    //Antes da reinderização da página e executado o hook useEffect()
-    useEffect(() => {
-        async function usarInfo(){
-            const resposta = await api.get(`https://api-fivedevs.onrender.com/${_id}`);
-            setinfo(resposta.data);
-        };
-
-        usarInfo();
-    }, );
+  // Definir estados para os valores dos campos
+  const [nome, setNome] = useState(informacoes.nome || '');
+  const [descricao, setDescricao] = useState(informacoes.descricao || '');
+  const [foto, setFoto] = useState(informacoes.foto || '');
 
 
-    
-      const minhaLista = localStorage.getItem('info');
-      let Aluno = JSON.parse(minhaLista) || [];
+console.log(nome)
+console.log(descricao)
+console.log(foto)
 
-      
-      
-      Aluno.push(infor);
-      localStorage.setItem('info', JSON.stringify(Aluno));
+ 
 
+function put () {
+
+
+  let data = {
+  nome : nome,
+  descricao: descricao,
+  foto: foto
+ }
+
+
+
+  axios.put(`https://api-fivedevs.onrender.com/${informacoes._id}/`, data)
+            .then(response => {
+              console.log(response.data);
+              
+            }) 
+            .catch(error => {
+              console.log(error);
+              window.alert("DEU RUIM ")
+            })
+        }
+        
    return (
         <EstruturaPagina>
-          <section className="student">
-            <div className="student_info">
-              <input
-               type="text"
-                id="simg"
-                placeholder="Arraste a foto"
-                defaultValue={ infor.foto}
-                 />
-                 <br /><br />
-              <button> ADICIONAR CONTATO</button>
-            </div>
-            <div className="student_description">
-              <label>Nome:</label>
+          <section className="student" >
+                <article>
+            <div className="student_info" >
+              <img src={informacoes.foto} alt="foto"/>
+                <input
+                  type="text"
+                  id="simg"
+                  placeholder="Arraste a foto" />
+                <br/><br />
+                <button> ADICIONAR CONTATO</button>
+              </div>
+              
+              <div className="student_description">
+                  <label>Nome:</label>
+                  <input
+                    type="text"
+                    id="snome"
+                    // onClick={ Altnome }
+                    defaultValue={ informacoes.nome } />
 
-              <input
-               type="text" 
-               id="snome"
-               defaultValue={ infor.nome}
-                />
 
+                  <label id="des">Descrição:</label>
+                  <input
+                    type="text"
+                    id="sdescricao"
+                    defaultValue={informacoes.descricao}
+                    // onClick={ AltDesc } 
+                    />
 
-              <label id="des">Descrição:</label>
-              <input 
-              type="text" 
-              id="sdescricao"
-              defaultValue={ infor.descricao}
-              />
-    
-              <button > SALVAR ALTERAÇÕES </button>
-            </div>
+                  <button onClick={ put }> SALVAR ALTERAÇÕES </button>
+                </div>
+                </article>
           </section>
         </EstruturaPagina>
       );

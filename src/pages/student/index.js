@@ -17,6 +17,7 @@ function Student() {
         async function usarInfo(){
             const resposta = await api.get(`https://api-fivedevs.onrender.com/${_id}`);
             setinfo(resposta.data);
+            localStorage.setItem('aluno1', JSON.stringify(resposta.data));
         };
 
         usarInfo();
@@ -31,6 +32,11 @@ function Student() {
       
       Aluno.push(info);
       localStorage.setItem('infos', JSON.stringify(Aluno));
+
+      
+
+      
+
 
   return (
     <EstruturaPagina>

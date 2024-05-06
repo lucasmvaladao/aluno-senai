@@ -17,6 +17,7 @@ function Card (){
         async function usarInfo(){
             const resposta = await api.get('https://api-fivedevs.onrender.com/');
             setinfo(resposta.data);
+            localStorage.setItem('infos', JSON.stringify(resposta.data));
         };
 
         usarInfo();
