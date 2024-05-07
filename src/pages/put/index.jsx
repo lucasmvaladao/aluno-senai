@@ -1,36 +1,56 @@
 import React from "react";
 import axios from 'axios';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "./put.css"
 
  function Put() {
 
-  const { _id }  = useParams();
 
   const informacoes = JSON.parse(localStorage.getItem('aluno1')) || [];
+
+
 
   // Definir estados para os valores dos campos
   const [nome, setNome] = useState(informacoes.nome || '');
   const [descricao, setDescricao] = useState(informacoes.descricao || '');
   const [foto, setFoto] = useState(informacoes.foto || '');
 
+  const newnome = (event) => { 
 
-console.log(nome)
-console.log(descricao)
-console.log(foto)
+    const value = event.target.value;
 
+    console.log('Value:', value);
+
+    setNome(value);
+  };
+  const newfoto = (event) => {
+    const value = event.target.value;
+
+    console.log('Value:', value);
+
+    setFoto(value);
+  };
+  const newDesc = (event) => {
+    const value = event.target.value;
+
+    console.log('Value:', value);
+
+    setDescricao(value);
+  };
+  
+  
  
 
 function put () {
 
 
   let data = {
-  nome : nome,
-  descricao: descricao,
+  nome : nome, 
+  descricao: descricao, 
   foto: foto
  }
+
 
 
 
@@ -54,7 +74,9 @@ function put () {
                 <input
                   type="text"
                   id="simg"
-                  placeholder="Arraste a foto" />
+                  placeholder="Arraste a foto"
+                  onChange={ newfoto }
+                   />
                 <br/><br />
                 <button> ADICIONAR CONTATO</button>
               </div>
@@ -65,7 +87,8 @@ function put () {
                     type="text"
                     id="snome"
                     // onClick={ Altnome }
-                    defaultValue={ informacoes.nome } />
+                    defaultValue={ informacoes.nome }
+                    onChange={ newnome } />
 
 
                   <label id="des">Descrição:</label>
@@ -73,6 +96,7 @@ function put () {
                     type="text"
                     id="sdescricao"
                     defaultValue={informacoes.descricao}
+                    onChange={ newDesc}
                     // onClick={ AltDesc } 
                     />
 
