@@ -25,34 +25,35 @@ function Card (){
 
    
 
-    return(
+    return (
         <EstruturaPagina>
-        <div className="container">
-            
-            <section className="sessao">
-                <ul className="lista">
-                    
-                    {infos.map((inf) => {
-                    return(
-                        <article key={inf._id}>
-                        <li>
-                        <img src={ inf.foto } alt="imagem aluno"/>
-                        <h2 className="nome"> {inf.nome} </h2>
-                        <Link to={`/contato/${inf._id}`} className="link"><button className="visu"> VISUALIZAR </button> </Link>
-                        <button className="excluir" onClick={ () => Excluir(inf._id) }> EXCLUIR </button>
-                        </li>
-                        </article>
-                    )
-                })}
-                </ul>
+            <section className="container_card">
+                <div className="card">
+                    <section className="sessao">
+                        <ul className="lista">
+                            {infos.map((inf) => (
+                                <article key={inf._id}>
+                                    <li>
+                                        <img src={inf.foto} alt="imagem aluno" />
+                                        <h2 className="nome">{inf.nome}</h2>
+
+                                       
+                                            <Link to={`/contato/${inf._id}`} className="link">
+                                                <button className="visu">VISUALIZAR</button>
+                                            </Link>
+                                            <button className="excluir" onClick={() => Excluir(inf._id)}>EXCLUIR</button>
+                                        
+                                    </li>
+                                </article>
+                            ))}
+                        </ul>
+                    </section>
+                    <div className="footer"></div>
+                </div>
             </section>
-
-            <div className="footer"></div>
-           
-        </div>
-         </EstruturaPagina>
+        </EstruturaPagina>
     )
-
+    
     function Excluir(_id){
         axios.delete(`https://api-fivedevs.onrender.com/${_id}`)
         window.alert("ESSE ID FOI PRO VASCO")

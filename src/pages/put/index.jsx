@@ -76,48 +76,49 @@ function put () {
         
    return (
         <EstruturaPagina>
-          <section className="student" >
-                <article>
-            <div className="student_info" >
-              <img src={informacoes.foto} alt="foto"/>
-                <input
-                  type="text"
-                  id="simg"
-                  placeholder="Arraste a foto"
-                  onChange={ newfoto }
-                   />
-                <br/><br />
-                <label> ADICIONAR CONTATO</label>
-                <input
-                type="text"
-                id="scontato"
-                defaultValue={informacoes.contato}
-                onChange={ newcontato }
-                 />
-              </div>
+          <section className="put_container">
+            <div className="put" >
               
-              <div className="student_description">
-                  <label>Nome:</label>
-                  <input
-                    type="text"
-                    id="snome"
-                    // onClick={ Altnome }
-                    defaultValue={ informacoes.nome }
-                    onChange={ newnome } />
+              
+                <div className="put_info" >
+                  <img src={informacoes.foto} alt="foto"/>
+                    <input type="text" id="simg" placeholder="Altere o link da foto" onChange={ newfoto }/>
+                    <br/><br />
+                    <button onClick={ put }> SALVAR ALTERAÇÕES </button>
+                  </div>
+                  
+                  <div className="put_description">
+                      <label>Nome:</label>
+                      <input
+                        type="text"
+                        id="snome"
+                        // onClick={ Altnome }
+                        defaultValue={ informacoes.nome }
+                        onChange={ newnome } />
 
 
-                  <label id="des">Descrição:</label>
-                  <input
+                      <label id="des">Descrição:</label>
+                      <input
+                        type="text"
+                        id="sdescricao"
+                        defaultValue={informacoes.descricao}
+                        onChange={ newDesc}
+                        // onClick={ AltDesc } 
+                        />
+
+                    <label> Contato:</label>
+                    <input
                     type="text"
-                    id="sdescricao"
-                    defaultValue={informacoes.descricao}
-                    onChange={ newDesc}
-                    // onClick={ AltDesc } 
+                    id="scontato"
+                    defaultValue={informacoes.contato}
+                    onChange={ newcontato }
                     />
 
-                  <button onClick={ put }> SALVAR ALTERAÇÕES </button>
-                </div>
-                </article>
+                      
+                    </div>
+          
+          
+            </div>
           </section>
         </EstruturaPagina>
       );

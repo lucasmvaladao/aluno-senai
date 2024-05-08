@@ -5,14 +5,14 @@
     padding: 0;
 }
 
-.put_container{
+.edit_container{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 50px;
 }
 
-.put{
+.edit{
     width: 980px;
     height: 420px;
     border: 1px solid #E30613;
@@ -22,27 +22,27 @@
     gap: 55px;
 }
 
-.put_info{
+.edit_info{
     display: flex;
     flex-direction: column;
 }
 
-.put_info img{
+.edit_info img{
     width: 225px;
     height: 225px;        
 }
 
-.put_info #simg{
+.edit_info #simg{
     color: #000;
     font-size: 15px;
-    padding: 10px 10px;
+    padding: 90px 10px;
     border-radius: 5px;
     border: none;
     text-align: center;
     background: rgb(217,217,217,0.25); 
 }
 
-.put_info button{
+.edit_info button{
     background-color: red;
     border: none;
     width: 150px;
@@ -55,17 +55,16 @@
     border-radius: 20px;
     font-weight: 500;
     width: 225px;  
-  
 }
 
-.put_description label{
+.edit_description label{
     color: rgb(0,0,0,0.3);
     font-size: 15px;
     font-family: "Inter", sans-serif; 
     margin-top: 10px;
 }
 
-.put_description #sdescricao {
+.edit_description #sdescricao {
     color: #000;
     border-radius: 5px;
     border: none; 
@@ -77,13 +76,12 @@
 }
 
 
-.put_description{
+.edit_description{
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
 }
 
-#scontato, #snome{
+#contato, #snome{
     color: #000;
     font-size: 15px;
     padding: 10px;
@@ -94,6 +92,6 @@
 input:focus-visible {
     outline: none;
 }
-.put_description, .put_info label{
+.edit_description, .edit_info label{
     text-align: left;
 }

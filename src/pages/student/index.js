@@ -40,29 +40,29 @@ function Student() {
 
   return (
     <EstruturaPagina>
-      <section className="student">
-                        <article key={info._id}>
-                        <div className="student_info">
-                        <div className="imagem">
-                        <img src={ info.foto } alt="imagem aluno"/>
-                        </div>
-                        <Link to={info.contato} target="blank">
-                        <button >
-                          CONTATO
-                        </button>
-                        </Link>
-                        </div>
-                        <div className="student_description">
-                        <h2 className="nome"> {info.nome} </h2>
-                        <p> {info.descricao}</p>
-                        <Link to={`/put/${info._id}`} >
-                        <button >EDITAR</button>
-                        </Link>
-                        </div>
-                        </article>
+      <section className="student_container">
+     
+          <article className="student" key={info._id}>
+            <div className="student_info">
+              <div className="imagem">
+                <img src={ info.foto } alt="imagem aluno"/>
+              </div>
+            <Link to={info.contato} target="blank">
+              <button >
+              CONTATO
+              </button>
+            </Link>
+            </div>  
+            
+            <div className="student_description">
+              <h1> {info.nome} </h1>
+              <p> {info.descricao}</p>
+              <Link to={`/put/${info._id}`} >
+                <button >EDITAR</button>
+              </Link>
+            </div>
+          </article>
       </section>
-        <div className="footer"> </div>
-
     </EstruturaPagina>
   );
 
