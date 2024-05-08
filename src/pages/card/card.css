@@ -1,7 +1,92 @@
-.container{
-    text-align: center;
+.card{
+    text-align: center; 
 }
 
+.container_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao{
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+
+   
+} 
+.lista{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.lista li{
+    background-color: rgb(255, 255, 255);
+    width: 80vw;
+    height: 100px;
+    border: solid red   ;
+    display: flex;
+    align-items: center;    
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.lista li img{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin-left: 15px;
+    margin-top: -2px;
+
+}
+.nome{
+    font-size: 30px;
+    margin-left: 40px;
+    width: 300px;
+    object-fit: fill;
+}
+.excluir{
+    border-radius: 20px;
+    width: 120px;
+    height: 30px;
+    background-color: red;
+    border: solid red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 150px;
+    margin-right: -250px;
+    font-weight: 500;
+}
+
+.visu{
+    margin-left: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: red;
+    border: none;
+    width: 150px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.link{
+    text-decoration: none;
+}
+
+.footer{
+    width: 100vw;
+    height: 70px;
+} 
 
 .adicionar{
     border-radius: 20px;
@@ -15,83 +100,4 @@
     margin-left: 150px;
     margin-right: -250px;
     font-weight: 500;
-}
-.sessao{
-    background-color: white;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-.lista{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
-}
-.lista li{
-    background-color: rgb(255, 255, 255);
-    width: 90vw;
-    margin-left: -40px;
-    border: solid red;
-    display: flex;
-    align-items: center;
-    
-}
-body{
-    overflow-x: hidden;
-}
-.lista li img{
-    width: 90px;
-    height: 90px;
-    display: flex;
-    margin-left: 15px;
-    margin-top: -2px;
-
-}
-.nome{
-    font-size: 30px;
-    margin-left: 40px;
-    width: 200px;
-    object-fit: fill;
-}
-.excluir{
-    display: flex;
-    margin-left: 40px;
-    margin-right: 40px;
-    background-color: red;
-    padding: 10px;
-    border: none;
-    width: 150px;
-    height: 30px;
-    color: white;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    font-weight: 500;
-}
-.visu{
-    display: flex;
-    margin-left: 500px;
-    padding: 10px;
-    background-color: red;
-    border: none;
-    width: 150px;
-    height: 30px;
-    color: white;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    font-weight: 500;
-}
-.link{
-    text-decoration: none;
-}
-
-.footer{
-    width: 100vw;
-    height: 70px;
 }
