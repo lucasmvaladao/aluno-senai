@@ -46,9 +46,11 @@ function Student() {
                         <div className="imagem">
                         <img src={ info.foto } alt="imagem aluno"/>
                         </div>
+                        <Link to={info.contato} target="blank">
                         <button >
-                          <a href="https://www.linkedin.com/in/kamila-cavalcante-45540915a/" >CONTATO</a>
+                          CONTATO
                         </button>
+                        </Link>
                         </div>
                         <div className="student_description">
                         <h2 className="nome"> {info.nome} </h2>

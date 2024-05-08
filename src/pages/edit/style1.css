@@ -104,3 +104,12 @@ margin-top: 10px;
     width: 225px;
     margin-top: 10px;
 }
+#contato{
+    color: #000;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background: rgb(217,217,217,0.25); 
+    border: none;
+}

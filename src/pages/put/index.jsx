@@ -15,6 +15,8 @@ import "./put.css"
   const [nome, setNome] = useState(informacoes.nome || '');
   const [descricao, setDescricao] = useState(informacoes.descricao || '');
   const [foto, setFoto] = useState(informacoes.foto || '');
+  const [contato, setContato] = useState(informacoes.contato || '');
+  
 
   const newnome = (event) => { 
 
@@ -38,7 +40,13 @@ import "./put.css"
 
     setDescricao(value);
   };
-  
+  const newcontato = ( event ) => {
+    const value = event.target.value;
+
+    console.log('Value:', value);
+
+    setContato(value);
+  }
   
  
 
@@ -48,7 +56,8 @@ function put () {
   let data = {
   nome : nome, 
   descricao: descricao, 
-  foto: foto
+  foto: foto,
+  contato: contato
  }
 
 
@@ -78,7 +87,13 @@ function put () {
                   onChange={ newfoto }
                    />
                 <br/><br />
-                <button> ADICIONAR CONTATO</button>
+                <label> ADICIONAR CONTATO</label>
+                <input
+                type="text"
+                id="scontato"
+                defaultValue={informacoes.contato}
+                onChange={ newcontato }
+                 />
               </div>
               
               <div className="student_description">

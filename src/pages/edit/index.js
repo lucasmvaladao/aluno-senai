@@ -10,6 +10,7 @@ import "../edit/style1.css"
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [foto, setFoto] = useState('');
+  const [contato, setContato] = useState('');
 
   function POST(){
   
@@ -18,7 +19,9 @@ import "../edit/style1.css"
     let jsonArr = {
       "nome": nome,
       "descricao": descricao,
-      "foto": foto
+      "foto": foto,
+      "contato": contato
+      
     }
       
       console.log(jsonArr)
@@ -46,7 +49,12 @@ import "../edit/style1.css"
                 value={foto}
                 onChange={(e) => setFoto(e.target.value)} />
                  <br /><br />
-              <button> ADICIONAR CONTATO</button>
+              <label> ADICIONAR CONTATO </label>
+              <input 
+              type="text"
+              id="contato"
+              value={contato}
+              onChange={(e) => setContato(e.target.value)} />
             </div>
             <div className="student_description">
               <label>Nome:</label>
