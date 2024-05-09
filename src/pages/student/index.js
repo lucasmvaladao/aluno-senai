@@ -47,11 +47,17 @@ function Student() {
               <div className="imagem">
                 <img src={ info.foto } alt="imagem aluno"/>
               </div>
-            <Link to={info.contato} target="blank">
-              <button >
-              CONTATO
-              </button>
-            </Link>
+              <div>
+              {info.contato === "" &&
+              <p>Contato não informado pelo Aluno</p>  
+               }
+               {
+              info.contato !== "" &&
+              <Link to={info.contato} target="blank">
+              <button>CONTATO</button>
+              </Link>
+               }
+             </div>
             </div>  
             
             <div className="student_description">

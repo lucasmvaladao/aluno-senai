@@ -56,9 +56,11 @@ function Card (){
     
     function Excluir(_id){
         axios.delete(`https://api-fivedevs.onrender.com/${_id}`)
-        window.alert("ESSE ID FOI PRO VASCO")
+        window.alert("Aluno Excluido com Sucesso")
         window.location.reload();
         }
+
+       
 }
 
 export default Card;

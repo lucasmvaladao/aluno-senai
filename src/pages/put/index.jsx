@@ -101,7 +101,7 @@ function put () {
 
 
                       <label id="des">Descrição:</label>
-                      <input
+                      <textarea rows="4" cols="50"
                         type="text"
                         id="sdescricao"
                         defaultValue={informacoes.descricao}

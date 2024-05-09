@@ -4,6 +4,8 @@ import { useState } from 'react';
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "../edit/edit.css"
 
+
+
  function Edit() {
 
 
@@ -22,6 +24,17 @@ import "../edit/edit.css"
       "foto": foto,
       "contato": contato
       
+    }
+
+    if(jsonArr.foto ===""){
+      jsonArr.foto = "https://png.pngtree.com/png-vector/20191009/ourmid/pngtree-user-icon-png-image_1796659.jpg"
+    }
+    if(jsonArr.descricao===""){
+      jsonArr.descricao = "Aluno do Senai"
+    }
+    if(jsonArr.nome===""){
+      alert("Nome obrigatório")
+      return;
     }
       
       console.log(jsonArr)
@@ -46,6 +59,13 @@ import "../edit/edit.css"
 
    return (
         <EstruturaPagina>
+          <style> 
+          {`
+          .adicionar{
+             visibility: hidden;
+          }
+        `}
+          </style>
           <section className="edit_container">
             <div className="edit">
 
@@ -73,7 +93,7 @@ import "../edit/edit.css"
 
 
                 <label id="des">Descrição:</label>
-                <input 
+                <textarea rows="4" cols="50" 
                 type="text" 
                 id="sdescricao"
                 value={descricao} 

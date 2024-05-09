@@ -97,3 +97,6 @@ input:focus-visible {
 .put_description, .put_info label{
     text-align: left;
 }
+textarea{
+    resize: none;
+}
