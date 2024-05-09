@@ -23,6 +23,17 @@ import "../edit/edit.css"
       "contato": contato
       
     }
+
+    if(jsonArr.foto ===""){
+      jsonArr.foto = "https://png.pngtree.com/png-vector/20191009/ourmid/pngtree-user-icon-png-image_1796659.jpg"
+    }
+    if(jsonArr.descricao===""){
+      jsonArr.descricao = "Aluno do Senai"
+    }
+    if(jsonArr.nome===""){
+      alert("Nome obrigatório")
+      return;
+    }
       
       console.log(jsonArr)
 
