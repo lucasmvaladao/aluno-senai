@@ -50,7 +50,7 @@ function Student() {
               <div>
               {info.contato === "" &&
               <p>Contato não informado pelo Aluno</p>
-              
+                          
                }
                {
               info.contato !== "" &&
