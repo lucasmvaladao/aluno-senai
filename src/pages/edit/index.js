@@ -30,11 +30,17 @@ import "../edit/edit.css"
     .then(response => {
       console.log(response)
       alert("Cadastrado com sucesso")
+      BackHome();
     })
     .catch(error => {
       console.log(error)
       alert("Erro ao cadastrar")
+      BackHome();
     })
+  }
+
+  function BackHome(){
+    window.location.href = "/"
   }
 
 

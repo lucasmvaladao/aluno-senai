@@ -47,7 +47,7 @@ body{
 .nome{
     font-size: 30px;
     margin-left: 40px;
-    width: 300px;
+    width: 200px;
     object-fit: fill;
 }
 .excluir{

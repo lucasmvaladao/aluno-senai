@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import EstruturaPagina from "../../componentes/EstruturaPagina";
 import "./put.css"
 
@@ -66,11 +67,13 @@ function put () {
   axios.put(`https://api-fivedevs.onrender.com/${informacoes._id}/`, data)
             .then(response => {
               console.log(response.data);
-              
+              window.alert("Informações Alteradas com Sucesso")
+              window.history.back();
             }) 
             .catch(error => {
               console.log(error);
-              window.alert("DEU RUIM ")
+              window.alert("Infelizmente Não Foi Possível Alterar as Informações do Usuário")
+              window.location.reload();
             })
         }
         
