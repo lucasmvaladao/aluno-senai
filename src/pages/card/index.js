@@ -57,7 +57,6 @@ function Card (){
     function Excluir(_id){
         axios.delete(`https://api-fivedevs.onrender.com/${_id}`)
         window.alert("Aluno excluído com sucesso ")
-        window.location.reload(); 
 
         }
 }
