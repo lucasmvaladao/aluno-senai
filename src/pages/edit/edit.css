@@ -81,15 +81,17 @@
     flex-direction: column;
 }
 
-#contato, #snome{
+#contato, #snome, textarea{
     color: #000;
     font-size: 15px;
     padding: 10px;
     border-radius: 5px;
+    font-family: "Inter", sans-serif; 
     background: rgb(217,217,217,0.25); 
     border: none;    
 }
-input:focus-visible {
+
+textarea, input:focus-visible {
     outline: none;
 }
 .edit_description, .edit_info label{
