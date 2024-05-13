@@ -14,11 +14,12 @@ a{
 
 .student{
     display: flex;
-    padding-left: 115px;
+    padding-left: 10vw;
+    padding-right: 10vw;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 989px;
+    width: 80vw;
     height: 427px;
     gap: 55px;    
     border: 1px solid #E30613;
@@ -29,6 +30,8 @@ a{
     justify-content: space-between;
     width: 80%;
 }
+
+
 
 .student_description p{
     width: 448px;
@@ -44,7 +47,7 @@ a{
 
 .student_description h1{
     color: #000;
-    text-align: center;
+
     font-family: Outfit;
     font-size: 30px;
     font-style: normal;
@@ -101,7 +104,80 @@ a{
     font-weight: 500;
     width: 225px;
     margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
     
+}
+
+@media screen and (max-width: 600px) {
+    .imagem{
+        
+    }
+
+    .student_description h1 {
+        text-align: center;
+        margin-left: 12vw;
+    }
+    .student_description p{
+        text-align: justify;
+        margin-left: 6vw;
+    }
+
+    .student_description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .student_description_names{
+
+    }
+    .student{
+        height: 550px;
+        width: 70vw;
+    }
+    .student{
+        display: flex;
+        
+    }
+
+    .student_description img {
+        display: block;
+        margin-left: 20vw;
+        margin-right: auto;
+        width: 42vw;
+        height: 42vw;
+        flex-shrink: 0;
+        margin-top: -300px;
+    }
+    
+    .student_info button{
+        width: 20vw;
+    }
+    .student_info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15vw;
+    
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .student{
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .student_description_names p{
+        width: 100%;
+        font-size: 14px;
+    }
+    .student_description img {
+        margin-top: 10px;
+    }
+
 }
 
 .footer{

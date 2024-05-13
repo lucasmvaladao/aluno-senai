@@ -76,8 +76,8 @@ body{
     color: white;
     font-size: 20px;
     font-weight: bold;
-
     font-weight: 500;
+    cursor: pointer;
 }
 
 .visu{
@@ -94,6 +94,7 @@ body{
     font-size: 20px;
     border-radius: 20px;
     font-weight: 500;
+    cursor: pointer;
 }
 .link{
     text-decoration: none;
@@ -103,6 +104,11 @@ body{
     width: 100vw;
     height: 70px;
 } 
+
+.imagem{
+
+    margin-right: 20px;
+}
 
 .adicionar{
     border-radius: 20px;
@@ -116,4 +122,36 @@ body{
     margin-left: 150px;
     margin-right: -250px;
     font-weight: 500;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .espacoLogo img {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .adicionar{
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: auto;
+        display: block;
+    }
+    .nome {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        object-fit: fill;
+    }
+
+    .student_description_names p{
+        font-size: 10px;
+    }
 }
