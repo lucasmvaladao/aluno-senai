@@ -11,17 +11,24 @@ a{
     margin: 50px;
 }
 
+
 .student{
     display: flex;
+    padding-left: 115px;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 989px;
     height: 427px;
-    gap: 55px;
-    
+    gap: 55px;    
     border: 1px solid #E30613;
 }
 
+.student_description{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
 
 .student_description p{
     width: 448px;
@@ -32,7 +39,7 @@ a{
     line-height: normal;
     font-family: "Outfit", sans-serif;
     text-align: left; 
-    margin-bottom: 80px;
+ 
 }
 
 .student_description h1{
@@ -67,10 +74,12 @@ a{
 
 .student_info{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 56%;
+    
 }
 
-.student_info img{
+.student_description img{
     width: 225px;
     height: 230px;
     flex-shrink: 0;

@@ -43,30 +43,38 @@ function Student() {
       <section className="student_container">
      
           <article className="student" key={info._id}>
-            <div className="student_info">
-              <div className="imagem">
-                <img src={ info.foto } alt="imagem aluno"/>
-              </div>
-              <div>
-              {info.contato === "" &&
-              <p>Contato não informado pelo Aluno</p>  
-               }
-               {
-              info.contato !== "" &&
-              <Link to={info.contato} target="blank">
-              <button>CONTATO</button>
-              </Link>
-               }
-             </div>
-            </div>  
+           
             
             <div className="student_description">
-              <h1> {info.nome} </h1>
-              <p> {info.descricao}</p>
-              <Link to={`/put/${info._id}`} >
-                <button >EDITAR</button>
-              </Link>
+              <div className="imagem">
+                  <img src={ info.foto } alt="imagem aluno"/>
+              </div>
+              <div className="student_description_names">
+                <h1> {info.nome} </h1>
+                <p> {info.descricao}</p>
+              </div>
             </div>
+
+            <div className="student_info">
+              
+              
+                {info.contato === "" &&
+                <p>Contato não informado pelo Aluno</p>  
+                }
+
+                {info.contato !== "" &&
+                <Link to={info.contato} target="blank">
+                <button>CONTATO</button>
+                </Link>
+                }
+
+                {<Link to={`/put/${info._id}`} >
+                    <button >EDITAR</button>
+                  </Link>
+                }
+            
+
+            </div>  
           </article>
       </section>
     </EstruturaPagina>
