@@ -34,14 +34,17 @@ function Card (){
                             {infos.map((inf) => (
                                 <article key={inf._id}>
                                     <li>
-                                        <img src={inf.foto} alt="imagem aluno" />
-                                        <h2 className="nome">{inf.nome}</h2>
+                                        <div className="imgename">
+                                            <img src={inf.foto} alt="imagem aluno" />
+                                            <h2 className="nome">{inf.nome}</h2>
+                                        </div>
 
-                                       
+                                        <div className="btnsvizuexclu">
                                             <Link to={`/contato/${inf._id}`} className="link">
                                                 <button className="visu">VISUALIZAR</button>
                                             </Link>
                                             <button className="excluir" onClick={() => Excluir(inf._id)}>EXCLUIR</button>
+                                        </div>
                                         
                                     </li>
                                 </article>
