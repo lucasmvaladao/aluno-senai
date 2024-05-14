@@ -1,4 +1,4 @@
-import Rotas from "./Rotas";
+import Rotas from "./Rotas";//definindo as rotas que serão exibidas na página, nada mais que isso 
 import './App.css';
 
 function App(){
